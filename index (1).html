@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Sorry My Love</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #FF6F91;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        .heart {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background-color: #FF6F91;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #FF6F91;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer a {
+            color: #FF6F91;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <h1>I Am Sorry, My Love</h1>
+        <p>You mean the world to me. Please forgive me.</p>
+    </div>
+    <footer>
+        Made with ❤️ by <a href="#">someone who loves you</a>
+    </footer>
+</body>
+</html>
